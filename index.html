@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>آزمون تیزهوشان نهم | سری ۱</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="hero">
+    <div>
+      <span class="badge">آزمون آزمایشی</span>
+      <h1>تیزهوشان نهم</h1>
+      <p>سری ۱ · هوش، منطق و ریاضی</p>
+    </div>
+    <div class="timer" id="timer">10:00</div>
+  </header>
+
+  <main>
+    <section id="startScreen" class="card start">
+      <div class="icon">🧠</div>
+      <h2>آماده‌ای؟</h2>
+      <p>۸ سؤال چهارگزینه‌ای در ۱۰ دقیقه. بعد از پایان، نتیجه و پاسخ تشریحی را می‌بینی.</p>
+      <ul>
+        <li>هر سؤال فقط یک پاسخ صحیح دارد.</li>
+        <li>می‌توانی بین سؤال‌ها جابه‌جا شوی.</li>
+        <li>پاسخ‌ها بعد از ثبت آزمون نمایش داده می‌شوند.</li>
+      </ul>
+      <button class="primary" id="startBtn">شروع آزمون</button>
+    </section>
+
+    <section id="quizScreen" class="hidden">
+      <div class="progressRow">
+        <span id="questionCounter"></span>
+        <span id="answeredCounter"></span>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+
+      <article class="card questionCard">
+        <div class="questionNumber" id="questionNumber"></div>
+        <h2 id="questionText"></h2>
+        <div id="options" class="options"></div>
+        <div class="nav">
+          <button class="secondary" id="prevBtn">قبلی</button>
+          <button class="primary" id="nextBtn">بعدی</button>
+        </div>
+      </article>
+
+      <div class="card navigator">
+        <h3>سؤال‌ها</h3>
+        <div id="questionNav"></div>
+        <button class="finish" id="finishBtn">پایان و مشاهده نتیجه</button>
+      </div>
+    </section>
+
+    <section id="resultScreen" class="hidden">
+      <div class="card result">
+        <div class="resultIcon" id="resultIcon">🎯</div>
+        <h2>آزمون تمام شد!</h2>
+        <div class="score" id="score"></div>
+        <div class="stats">
+          <div><b id="correct"></b><span>صحیح</span></div>
+          <div><b id="wrong"></b><span>غلط</span></div>
+          <div><b id="blank"></b><span>نزده</span></div>
+          <div><b id="percent"></b><span>درصد</span></div>
+        </div>
+        <button class="primary" id="reviewBtn">دیدن پاسخ‌های تشریحی</button>
+        <button class="secondary full" id="restartBtn">شروع دوباره</button>
+      </div>
+
+      <div id="review" class="review"></div>
+    </section>
+  </main>
+
+  <footer>آزمون آزمایشی تیزهوشان نهم · نسخه ۱</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
